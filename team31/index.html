@@ -1,0 +1,464 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CORN EDU </title>
+    
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>천재교육 팀플 1차</title>
+  
+  <!--스타일 초기화-->
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+  
+  <!--폰트-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&amp;display=swap" rel="stylesheet">
+  
+  <!-- 필요한 플러그인 연결 -->
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  
+  <!-- 파비콘 설정 -->
+  <!-- 16x16, 24x24, 32x32, 48x48, 64x64, 96x96, 114x114, 128x128, 256x256 등을 활용-->
+  <!-- 표준 파비콘 -->
+  <link rel="shortcut icon" href="./images/corn_24-24.png">
+  <!-- 애플 계열 모바일 -->
+  <link rel="apple-touch-icon-precomposed" href="./images/corn_64-64.png">
+  <!-- IE 계열 브라우저 -->
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="./images/corn_48-48.png">
+  <!-- 파이어폭스, 오페라, 또는 구형 크롬/사파리 -->
+  <!-- 브라우저에서 지원하는 것 중 제일 고화질의 파일 선택 -->
+  <link rel="icon" href="./images/corn_24-24.png" sizes="24x24">
+  <link rel="icon" href="./images/corn_48-48.png" sizes="48x48">
+  <link rel="icon" href="./images/corn_64-64.png" sizes="64x64">
+  
+  
+    <style>
+      <!-- link 이동 목록 -->
+      .page { clear:both; width: 100vw; height: 100vh; position:relative; }
+      .page::after { content:""; display:block; width: 100%; clear:both; }
+  
+      .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
+      .page_tit { font-size: 48px; text-align: center; padding-top:2em; }
+      .page_con { font-size: 20px; text-align: center; margin-top: 50px; color: #3a3a3a }
+    </style>
+  </head>
+  
+  <body>
+    <div class="wrap">
+      <div class="hd" id="hd">
+        
+  
+  <div class="tnb_wrap">
+      <nav class="tnb">
+          <ul class="menu">
+              
+                  <li><a href="./member/login.jsp">로그인</a></li>
+                  <li><a href="./member/term.jsp">회원가입</a></li>
+                  <li><a href="./map/map.jsp">오시는길</a></li>
+              
+          </ul>
+      </nav>
+  </div>
+  <div class="hd_wrap">
+      <a href="/" class="logo">
+          <img src="./images/corn_edu_400-256.png" alt="CORN EDU 로고 타입">
+      </a>
+      <nav class="gnb">
+          <ul class="menu">
+              <li class="item1">
+                  <a href="" class="dp1"> 소 개 </a>
+                  <ul class="sub">
+                      <li><a href="./intro/intro.jsp"> 회사 소개 </a></li>
+                      <li><a href="./intro/serviceIntro.jsp"> 서비스 소개 </a></li>
+                      <li><a href="./map/map.jsp"> 오시는 길 </a></li>
+                  </ul>
+              </li>
+              <li class="item2">
+                  <a href="" class="dp1"> 초 등 </a>
+                  <ul class="sub">
+                      <li><a href="./lecture/lectures.jsp?target=초등"> 강의 소개 </a></li>
+                      <li><a href="./bookInfo/elmBookInfo.jsp"> 교재 소개 </a></li>
+                  </ul>
+              </li>
+              <li class="item3">
+                  <a href="" class="dp1"> 중 등 </a>
+                  <ul class="sub">
+                      <li><a href="./lecture/lectures.jsp?target=중등"> 강의 소개 </a></li>
+                      <li><a href="./bookInfo/middleBookInfo.jsp"> 교재 소개 </a></li>
+                  </ul>
+              </li>
+              <li class="item4">
+                  <a href="" class="dp1"> 고 등 </a>
+                  <ul class="sub">
+                      <li><a href="./lecture/lectures.jsp?target=고등"> 강의 소개 </a></li>
+                      <li><a href="./bookInfo/highBookInfo.jsp"> 교재 소개 </a></li>
+                  </ul>
+              </li>
+              <li class="item5">
+                  <a href="" class="dp1"> 커뮤니티 </a>
+                  <ul class="sub">
+                      <li><a href="./board/studentboard/StudentBoardList.jsp?page=1"> 학생 커뮤니티 </a></li>
+                      <li><a href="./board/motherboard/MotherBoardList.jsp?page=1"> 학부모 커뮤니티 </a></li>
+                  </ul>
+              </li>
+              <li class="item6">
+                  <a href="" class="dp1"> 고객지원 </a>
+                  <ul class="sub">
+                      <li><a href="./cs/board/boardList.jsp?page=1"> 공지사항 </a></li>
+                      <li><a href="./cs/qna/qnaList.jsp?page=1"> QnA </a></li>
+                      <li><a href="./cs/faq/faqList.jsp"> FAQ </a></li>
+                  </ul>
+              </li>
+          </ul>
+  
+      </nav>
+  </div>
+      </div>
+      <!-- 컨텐츠 상단 부분 content.jsp-->
+      
+  
+  <link rel="stylesheet" href="./css/content.css">
+  <div class="contents" id="contents">
+      <figure class="vs">
+          <ul class="img_box">
+              <li class="item1">
+                  <input type="radio" name="vs_ra" id="vs_ra1" class="vs_ra" checked="">
+                  <div class="bg_box"></div>
+                  <h2 class="vs_tit">학생들의 미래를 위한 교육<br>
+                      콘에듀</h2>
+              </li>
+              <li class="item2 active">
+                  <input type="radio" name="vs_ra" id="vs_ra2" class="vs_ra" checked="">
+                  <div class="bg_box"></div>
+                  <h2 class="vs_tit">최고의 교육을 경험하세요</h2>
+              </li>
+              <ul class="btn_box">
+                  <li class="item1"><label for="vs_ra1" class="vs_btn"></label></li> &nbsp;&nbsp;
+                  <li class="item2 active"><label for="vs_ra1" class="vs_btn"></label></li>
+              </ul>
+              <button type="button" class="play_btn"></button>
+              <script>
+                  $(function(){
+                      $(".btn_box li .vs_btn").click(function(){
+                          var par = $(this).parents("li").index();
+                          $(".img_box li").removeClass("active");
+                          $(".img_box li").eq(par).addClass("active");
+                          $(".btn_box li").removeClass("active");
+                          $(".btn_box li").eq(par).addClass("active");
+                      });
+                      var sw = 1;
+                      var int1 = setInterval(function(){
+                          if(sw==1){
+                              autoplay(1);
+                              sw = 0;
+                          } else {
+                              autoplay(0);
+                              sw = 1;
+                          }
+                      }, 4000);
+  
+                      function autoplay(n){
+                          $(".img_box li").removeClass("active");
+                          $(".img_box li").eq(n).addClass("active");
+                          $(".btn_box li").removeClass("active");
+                          $(".btn_box li").eq(n).addClass("active");
+                      }
+  
+                      $(".play_btn").click(function(){
+                          if($(this).hasClass("active")){
+                              $(this).removeClass("active");
+                              sw = 1;
+                              int1 = setInterval(function(){
+                                  if(sw==1){
+                                      autoplay(1);
+                                      sw = 0;
+                                  } else {
+                                      autoplay(0);
+                                      sw = 1;
+                                  }
+                              }, 3500);
+                          } else {
+                              $(this).addClass("active");
+                              sw = 0;
+                              clearInterval(int1);
+                          }
+                      });
+                  });
+              </script>
+          </ul>
+      </figure>
+  </div>
+  </div>
+  
+  
+  
+      <!-- 메뉴 링크 부분 link.jsp -->
+      
+  
+  <style>
+      .pic_lst { clear:both; width: 1110px; margin: 0px auto; padding-top: 50px; }
+      .pic_lst li { width: 340px; height: 242px; padding :40px; margin-left:30px; float:left;
+          margin-top:50px; transition:0.4s; overflow:hidden; box-sizing: border-box; box-shadow:5px 5px 5px #999; }
+      .pic_lst li:hover { margin-top: 20px; box-shadow:10px 10px 10px #999; }
+      .pic_lst li a { display:block; width: 256px; height: 376px; margin: 11px;
+          color:#fff; text-align: left; }
+      .pic_lst li:first-child { background-color: #FFD966; border-radius: 50px; }
+      .pic_lst li:nth-child(2) { background-color: #A9D18E; border-radius: 50px;}
+      .pic_lst li:last-child { margin-right:0px; background-color:#9DC3E6; border-radius: 50px;}
+      .pic_tit { font-size : 26px; text-shadow:0px 2px 7px rgba(0,0,0,0.12); font-weight:bold;}
+      .pic_com {display: block; line-height: 1.2; position: relative; margin-top:10px; margin-bottom: 50px;}
+      .pic_arrow { border : 2px solid #fff; border-radius: 50px; padding:10px; float: right; }
+      #pic_a1:hover { background-color:#ffffff; color:#FFD966; transition: 0.7s; }
+      #pic_a2:hover { background-color:#ffffff; color:#A9D18E; transition: 0.7s; }
+      #pic_a3:hover { background-color:#ffffff; color:#9DC3E6; transition: 0.7s; }
+  </style>
+  
+  <section class="page" id="page1">
+      <div class="page_wrap">
+          <ul class="pic_lst">
+              <li class="item1">
+                  <a href="./lecture/lectures.jsp?target=초등">
+                      <strong class="pic_tit">초등</strong>
+                      <em class="pic_com">초등학생 메뉴로 이동합니다.</em>
+                      <span class="pic_arrow" id="pic_a1">이동하기 →</span>
+                  </a>
+              </li>
+              <li class="item2">
+                  <a href="./lecture/lectures.jsp?target=중등">
+                      <strong class="pic_tit">중등</strong>
+                      <em class="pic_com">중학생 메뉴로 이동합니다.</em>
+                      <span class="pic_arrow" id="pic_a2">이동하기 →</span>
+                  </a>
+              </li>
+              <li class="item3">
+                  <a href="./lecture/lectures.jsp?target=고등">
+                      <strong class="pic_tit">고등</strong>
+                      <em class="pic_com">고등학생 메뉴로 이동합니다.</em>
+                      <span class="pic_arrow" id="pic_a3">이동하기 →</span>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </section>
+  
+      <!--추천 강의 목록 lecture.jsp -->
+      
+  
+  <style>
+      <!--추천 강의 목록 스타일 -->
+      .box_tit { text-align: center; padding : 10px; margin-top:20px; margin-bottom : 20px;}
+      .box_group { width: 992px; height : 250px; margin: 20px auto; }
+      .box { float:left; display : block; width : 228px; height: 250px; margin : 10px; padding: 10px; transition: 0.3s; border: 1px solid #ddd; box-sizing: border-box; }
+      .box:hover { box-shadow: 10px 10px 10px #aaa; }
+      .image { padding-bottom:20px; }
+      .image img { width: 100%; height: 130px; }
+  </style>
+  
+  <section class="page" id="page2">
+      <div class="page_wrap">
+          <h2 class="page_tit"> 인기 강의 </h2>
+          <p class="page_con"> 많은 학생들에게 사랑받은 인기 강의로 한 단계 더 성장해보세요 </p>
+          <!--추천 강의 목록 박스(이미지,제목, 내용순)로 정렬-->
+          <div class="box_group">
+              <div class="box">
+                  <div class="image"><img src="./images/math01.png" alt="수학Ⅰ 썸네일"></div>
+                  <div class="box_com">
+                      <h4> [2024 수능] 수학Ⅰ </h4><br>
+                      <p> 김이름 </p>
+                  </div>
+              </div>
+              <div class="box">
+                  <div class="image"><img src="./images/math02.jpg" alt="수학Ⅱ 썸네일"></div>
+                  <div class="box_com">
+                      <h4> [2024 수능] 수학Ⅱ </h4><br>
+                      <p> 이하나 </p>
+                  </div>
+              </div>
+              <div class="box">
+                  <div class="image"><img src="./images/english01.jpg"></div>
+                  <div class="box_com">
+                      <h4> 영어구문 </h4><br>
+                      <p> 박지영 </p>
+                  </div>
+              </div>
+              <div class="box">
+                  <div class="image"><img src="./images/english02.jpg"></div>
+                  <div class="box_com">
+                      <h4> 영어독해연습 </h4><br>
+                      <p> 박지영 </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  
+      <!--공지사항, 이벤트 게시판 board.jsp-->
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+      <!--공지사항과 이벤트 게시판 스타일-->
+      #page3 {clear : both; background-color: gray;}
+      .board_lst { background-color: rgba(240, 240, 240, 0.5); margin-top : 100px; }
+      .board_wrap { width: 1250px; margin: 0px auto; padding: 10px; }
+      .board { display : inline-block; margin: 60px; vertical-align: top; }
+      .board_title { display : inline-block; position: relative; width: 500px; }
+      .notice_title {margin : 5px; font-size: 20px; font-weight: bold;}
+      .notice_more { position : absolute; top: 5px; right :0;}
+      .events_title {margin : 5px; font-size: 20px; font-weight: bold;}
+      .lst_group { display: flex; justify-content : space-between; margin-top : 10px; }
+      .lst_group a { line-height: 25px; width: 400px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+      .board_subject1::before { content:"🔉 공지"; margin-right: 5px; padding-right: 5px; border-radius: 50px; background-color: #333;
+          color:#fff; font-size: 10px; text-align: center; height: 25px; line-height: 25px; padding-left: 5px; display: inline-block }
+      .board_subject2::before { content:"🔉 공지"; margin-right: 5px; padding-right: 5px; border-radius: 50px; background-color: #333;
+          color:#fff; font-size: 10px; text-align: center; height: 25px; line-height: 25px; padding-left: 5px; display: inline-block}
+      a { text-decoration: none; display : flex; color : #333; }
+      .lst { border-top:2px solid #333; margin:0; width : 500px; padding: 0; }
+  </style>
+  
+  <section class="page" id="page3">
+      <div class="board_lst">
+          <div class="board_wrap">
+              <!--공지사항 게시판(공지사항, 더보기(공지사항 연결링크), 글목록 )-->
+              <div class="board">
+                  <div class="board_title">
+                      <h2 class="notice_title">공지사항</h2>
+                      <a href="./cs/board/boardList.jsp?page=1" class="notice_more">더보기 + </a>
+                  </div>
+                  <ul class="lst">
+                      
+                          <li class="lst_group">
+                              
+                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject1">공지사항8</a>
+                              
+                              <div class="board_date">2023-08-14</div>
+                          </li>
+                      
+                          <li class="lst_group">
+                              
+                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject2">공지사항7</a>
+                              
+                              <div class="board_date">2023-08-14</div>
+                          </li>
+                      
+                          <li class="lst_group">
+                              
+                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject3">공지사항6</a>
+                              
+                              <div class="board_date">2023-08-14</div>
+                          </li>
+                      
+                          <li class="lst_group">
+                              
+                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject4">공지사항5</a>
+                              
+                              <div class="board_date">2023-08-14</div>
+                          </li>
+                      
+                          <li class="lst_group">
+                              
+                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject5">공지사항4</a>
+                              
+                              <div class="board_date">2023-08-14</div>
+                          </li>
+                      
+                  </ul>
+              </div>
+  
+              <!--이벤트 게시판(이벤트, 더보기(커뮤니티 연결링크), 글목록 )-->
+              <div class="board">
+                  <div class="board_title">
+                      <h2 class="events_title"> 학부모 커뮤니티 인기 글 </h2>
+                      <a href="./board/motherboard/MotherBoardList.jsp" class="notice_more">더보기 + </a>
+                  </div>
+                  <ul class="lst">
+                      
+                          <li class="lst_group">
+                              
+                              <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject">N수생, 수능서 1.5배 증가.. 9월 모평 성적 보수적으로 평가해야</a>
+                              
+                              <div class="board_date">2023-08-14</div>
+                          </li>
+                      
+                  </ul>
+              </div>
+          </div>
+  
+      </div>
+  </section>
+  
+      <div class="ft" id="ft">
+        
+  <div class="ft_wrap">
+    <nav class="ft_link">
+      <ul class="fnb">
+        <li class="ft_logo"></li>
+        <li><a href="">제휴 문의</a></li>
+        <li><a href="">이메일 무단 수집 거부</a></li>
+      </ul>
+      <ul class="snb">
+        <li class="item1"><a href="">소셜1</a></li>
+        <li class="item2"><a href="">소셜2</a></li>
+        <li class="item3"><a href="">소셜3</a></li>
+        <li class="item4"><a href="">소셜4</a></li>
+        <li class="item5"><a href="">소셜5</a></li>
+        <li class="locate">
+          <select name="sel" id="sel" onchange="loc()">
+            <option value="">FAMILY LINK</option>
+            <option value="https://chunjaetext.co.kr/">천재교과서</option>
+            <option value="http://www.milkt.co.kr/Main/Main_new">밀크T</option>
+            <option value="http://www.prinpia.co.kr/">프린피아</option>
+            <option value="http://www.edumon.co.kr/intro/index.asp">에듀몬</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function loc(){
+        var url = document.getElementById("sel").value;
+        //location.href = url;  //현재 창에
+        if(url!="") {
+          var win = window.open(url); //새창에
+        }
+      }
+    </script>
+  </div>
+  <div class="ft_wrap2">
+    <p class="copyright">
+      <span>(주)천재교육</span>
+      <span>서울시 금천구 가산로9길 54</span>
+      <span>대표자 강희철</span>
+      <span>사업자등록번호 119-81-19350</span>
+      <span>통신판매신고번호 제18-439호</span>
+      <span class="end">부가통신사업신고 016712</span>
+    </p>
+    <p class="copyright">
+      <span>천재교육 1577-0902</span>
+      <span>리틀천재 1577-0218</span>
+      <span>월간우등생학습 1577-6226</span>
+      <span>밀크T초등 1577-1533</span>
+      <span>밀크T중학 1522-5533</span>
+      <span class="end">밀크T고등 1522-5533</span>
+    </p>
+    <p class="cp">COPYRIGHT 1981-2023 CHUNJAE EDUCATION INC. ALL RIGHTS RESERVED.</p>
+  </div>
+      </div>
+  
+  
+  </body></html>
