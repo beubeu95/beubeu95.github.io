@@ -18,24 +18,24 @@
   
   <!-- 필요한 플러그인 연결 -->
   <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/header.css">
-  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
   
   <!-- 파비콘 설정 -->
   <!-- 16x16, 24x24, 32x32, 48x48, 64x64, 96x96, 114x114, 128x128, 256x256 등을 활용-->
   <!-- 표준 파비콘 -->
-  <link rel="shortcut icon" href="./images/corn_24-24.png">
+  <link rel="shortcut icon" href="../images/corn_24-24.png">
   <!-- 애플 계열 모바일 -->
-  <link rel="apple-touch-icon-precomposed" href="./images/corn_64-64.png">
+  <link rel="apple-touch-icon-precomposed" href="../images/corn_64-64.png">
   <!-- IE 계열 브라우저 -->
   <meta name="msapplication-TileColor" content="#FFFFFF">
-  <meta name="msapplication-TileImage" content="./images/corn_48-48.png">
+  <meta name="msapplication-TileImage" content="../images/corn_48-48.png">
   <!-- 파이어폭스, 오페라, 또는 구형 크롬/사파리 -->
   <!-- 브라우저에서 지원하는 것 중 제일 고화질의 파일 선택 -->
-  <link rel="icon" href="./images/corn_24-24.png" sizes="24x24">
-  <link rel="icon" href="./images/corn_48-48.png" sizes="48x48">
-  <link rel="icon" href="./images/corn_64-64.png" sizes="64x64">
+  <link rel="icon" href="../images/corn_24-24.png" sizes="24x24">
+  <link rel="icon" href="../images/corn_48-48.png" sizes="48x48">
+  <link rel="icon" href="../images/corn_64-64.png" sizes="64x64">
   
   
     <style>
@@ -56,73 +56,72 @@
   
   <div class="tnb_wrap">
       <nav class="tnb">
-          <ul class="menu" id="menu">
+          <ul class="menu">
               
-                 
               
           </ul>
       </nav>
   </div>
   <script>
     var sid = sessionStorage.getItem("sid");
-    var menu = document.getElementById("menu");
+    var menu = document.getElementsByClassName("menu")[1];
     console.log(sid);
     if (sid == null) {
-        menu.innerHTML = '<li><a href="../member/login.html" > 로그인 </a></li><li><a href="../member/join.html" > 회원가입 </a></li> <li><a href="./map/map.html">오시는길</a></li>';
+        menu.innerHTML = '<li><a href="../member/login.html" class="button is-primary"> 로그인 </a><a href="../member/join.html" class="button is-light"> 회원가입 </a></li>';
     } else if (sid === "admin") {
-        menu.innerHTML = '<li><a href="../member/logout.html"> 로그아웃 </a><a href="../admin/list.html" > 관리자페이지 </a></li> <li><a href="./map/map.html">오시는길</a></li>';
+        menu.innerHTML = '<li><a href="../member/logout.html" class="button is-primary"> 로그아웃 </a><a href="../admin/list.html" class="button is-light"> 관리자페이지 </a></li>';
     } else {
-        menu.innerHTML = '<li><a href="../member/logout.html"> 로그아웃 </a><a href="../member/mypage.html"> 마이페이지 </a></li> <li><a href="./map/map.html">오시는길</a></li>';
+        menu.innerHTML = '<li><a href="../member/logout.html" class="button is-primary"> 로그아웃 </a><a href="../member/mypage.html" class="button is-light"> 마이페이지 </a></li>';
     }
 </script>
   <div class="hd_wrap">
       <a href="/" class="logo">
-          <img src="./images/corn_edu_400-256.png" alt="CORN EDU 로고 타입">
+          <img src="../images/corn_edu_400-256.png" alt="CORN EDU 로고 타입">
       </a>
       <nav class="gnb">
           <ul class="menu">
               <li class="item1">
                   <a href="" class="dp1"> 소 개 </a>
                   <ul class="sub">
-                      <li><a href="./intro/intro.html"> 회사 소개 </a></li>
-                      <li><a href="./intro/serviceIntro.html"> 서비스 소개 </a></li>
-                      <li><a href="./map/map.html"> 오시는 길 </a></li>
+                      <li><a href="../intro/intro.jsp"> 회사 소개 </a></li>
+                      <li><a href="../intro/serviceIntro.jsp"> 서비스 소개 </a></li>
+                      <li><a href="../map/map.jsp"> 오시는 길 </a></li>
                   </ul>
               </li>
               <li class="item2">
                   <a href="" class="dp1"> 초 등 </a>
                   <ul class="sub">
-                      <li><a href="./lecture/lectures.jsp?target=초등"> 강의 소개 </a></li>
-                      <li><a href="./bookInfo/elmBookInfo.html"> 교재 소개 </a></li>
+                      <li><a href="../lecture/lectures.jsp?target=초등"> 강의 소개 </a></li>
+                      <li><a href="../bookInfo/elmBookInfo.jsp"> 교재 소개 </a></li>
                   </ul>
               </li>
               <li class="item3">
                   <a href="" class="dp1"> 중 등 </a>
                   <ul class="sub">
-                      <li><a href="./lecture/lectures.jsp?target=중등"> 강의 소개 </a></li>
-                      <li><a href="./bookInfo/middleBookInfo.html"> 교재 소개 </a></li>
+                      <li><a href="../lecture/lectures.jsp?target=중등"> 강의 소개 </a></li>
+                      <li><a href="../bookInfo/middleBookInfo.jsp"> 교재 소개 </a></li>
                   </ul>
               </li>
               <li class="item4">
                   <a href="" class="dp1"> 고 등 </a>
                   <ul class="sub">
-                      <li><a href="./lecture/lectures.jsp?target=고등"> 강의 소개 </a></li>
-                      <li><a href="./bookInfo/highBookInfo.html"> 교재 소개 </a></li>
+                      <li><a href="../lecture/lectures.jsp?target=고등"> 강의 소개 </a></li>
+                      <li><a href="../bookInfo/highBookInfo.jsp"> 교재 소개 </a></li>
                   </ul>
               </li>
               <li class="item5">
                   <a href="" class="dp1"> 커뮤니티 </a>
                   <ul class="sub">
-                      <li><a href="./board/studentboard/StudentBoardList.jsp?page=1"> 학생 커뮤니티 </a></li>
-                      <li><a href="./board/motherboard/MotherBoardList.jsp?page=1"> 학부모 커뮤니티 </a></li>
+                      <li><a href="../board/studentboard/StudentBoardList.jsp?page=1"> 학생 커뮤니티 </a></li>
+                      <li><a href="../board/motherboard/MotherBoardList.jsp?page=1"> 학부모 커뮤니티 </a></li>
                   </ul>
               </li>
               <li class="item6">
                   <a href="" class="dp1"> 고객지원 </a>
                   <ul class="sub">
-                      <li><a href="./cs/board/boardList.jsp?page=1"> 공지사항 </a></li>
-                      <li><a href="./cs/qna/qnaList.jsp?page=1"> QnA </a></li>
-                      <li><a href="./cs/faq/faqList.jsp"> FAQ </a></li>
+                      <li><a href="../cs/board/boardList.jsp?page=1"> 공지사항 </a></li>
+                      <li><a href="../cs/qna/qnaList.jsp?page=1"> QnA </a></li>
+                      <li><a href="../cs/faq/faqList.jsp"> FAQ </a></li>
                   </ul>
               </li>
           </ul>
@@ -133,7 +132,7 @@
       <!-- 컨텐츠 상단 부분 content.jsp-->
       
   
-  <link rel="stylesheet" href="./css/content.css">
+  <link rel="stylesheet" href="../css/content.css">
   <div class="contents" id="contents">
       <figure class="vs">
           <ul class="img_box">
@@ -233,21 +232,21 @@
       <div class="page_wrap">
           <ul class="pic_lst">
               <li class="item1">
-                  <a href="./lecture/lectures.jsp?target=초등">
+                  <a href="../lecture/lectures.jsp?target=초등">
                       <strong class="pic_tit">초등</strong>
                       <em class="pic_com">초등학생 메뉴로 이동합니다.</em>
                       <span class="pic_arrow" id="pic_a1">이동하기 →</span>
                   </a>
               </li>
               <li class="item2">
-                  <a href="./lecture/lectures.jsp?target=중등">
+                  <a href="../lecture/lectures.jsp?target=중등">
                       <strong class="pic_tit">중등</strong>
                       <em class="pic_com">중학생 메뉴로 이동합니다.</em>
                       <span class="pic_arrow" id="pic_a2">이동하기 →</span>
                   </a>
               </li>
               <li class="item3">
-                  <a href="./lecture/lectures.jsp?target=고등">
+                  <a href="../lecture/lectures.jsp?target=고등">
                       <strong class="pic_tit">고등</strong>
                       <em class="pic_com">고등학생 메뉴로 이동합니다.</em>
                       <span class="pic_arrow" id="pic_a3">이동하기 →</span>
@@ -277,28 +276,28 @@
           <!--추천 강의 목록 박스(이미지,제목, 내용순)로 정렬-->
           <div class="box_group">
               <div class="box">
-                  <div class="image"><img src="./images/math01.png" alt="수학Ⅰ 썸네일"></div>
+                  <div class="image"><img src="../images/math01.png" alt="수학Ⅰ 썸네일"></div>
                   <div class="box_com">
                       <h4> [2024 수능] 수학Ⅰ </h4><br>
                       <p> 김이름 </p>
                   </div>
               </div>
               <div class="box">
-                  <div class="image"><img src="./images/math02.jpg" alt="수학Ⅱ 썸네일"></div>
+                  <div class="image"><img src="../images/math02.jpg" alt="수학Ⅱ 썸네일"></div>
                   <div class="box_com">
                       <h4> [2024 수능] 수학Ⅱ </h4><br>
                       <p> 이하나 </p>
                   </div>
               </div>
               <div class="box">
-                  <div class="image"><img src="./images/english01.jpg"></div>
+                  <div class="image"><img src="../images/english01.jpg"></div>
                   <div class="box_com">
                       <h4> 영어구문 </h4><br>
                       <p> 박지영 </p>
                   </div>
               </div>
               <div class="box">
-                  <div class="image"><img src="./images/english02.jpg"></div>
+                  <div class="image"><img src="../images/english02.jpg"></div>
                   <div class="box_com">
                       <h4> 영어독해연습 </h4><br>
                       <p> 박지영 </p>
@@ -349,41 +348,41 @@
               <div class="board">
                   <div class="board_title">
                       <h2 class="notice_title">공지사항</h2>
-                      <a href="./cs/board/boardList.jsp?page=1" class="notice_more">더보기 + </a>
+                      <a href="../cs/board/boardList.jsp?page=1" class="notice_more">더보기 + </a>
                   </div>
                   <ul class="lst">
                       
                           <li class="lst_group">
                               
-                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject1">공지사항8</a>
+                                  <a href="../cs/board/getBoard.jsp?bno=8" class="board_subject1">공지사항8</a>
                               
                               <div class="board_date">2023-08-14</div>
                           </li>
                       
                           <li class="lst_group">
                               
-                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject2">공지사항7</a>
+                                  <a href="../cs/board/getBoard.jsp?bno=7" class="board_subject2">공지사항7</a>
                               
                               <div class="board_date">2023-08-14</div>
                           </li>
                       
                           <li class="lst_group">
                               
-                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject3">공지사항6</a>
+                                  <a href="../cs/board/getBoard.jsp?bno=6" class="board_subject3">공지사항6</a>
                               
                               <div class="board_date">2023-08-14</div>
                           </li>
                       
                           <li class="lst_group">
                               
-                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject4">공지사항5</a>
+                                  <a href="../cs/board/getBoard.jsp?bno=5" class="board_subject4">공지사항5</a>
                               
                               <div class="board_date">2023-08-14</div>
                           </li>
                       
                           <li class="lst_group">
                               
-                                  <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject5">공지사항4</a>
+                                  <a href="../cs/board/getBoard.jsp?bno=4" class="board_subject5">공지사항4</a>
                               
                               <div class="board_date">2023-08-14</div>
                           </li>
@@ -395,13 +394,13 @@
               <div class="board">
                   <div class="board_title">
                       <h2 class="events_title"> 학부모 커뮤니티 인기 글 </h2>
-                      <a href="./board/motherboard/MotherBoardList.html" class="notice_more">더보기 + </a>
+                      <a href="../board/motherboard/MotherBoardList.jsp" class="notice_more">더보기 + </a>
                   </div>
                   <ul class="lst">
                       
                           <li class="lst_group">
                               
-                              <a href="javascript:alert('로그인 후 다시 시도해주세요.')" class="board_subject">N수생, 수능서 1.5배 증가.. 9월 모평 성적 보수적으로 평가해야</a>
+                              <a href="../board/motherboard/getMotherBoard.jsp?bno=1" class="event_subject">N수생, 수능서 1.5배 증가... 9월 모평 성적 보수적으로 평가해야</a>
                               
                               <div class="board_date">2023-08-14</div>
                           </li>
