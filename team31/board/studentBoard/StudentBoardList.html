@@ -1,0 +1,360 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생 커뮤니티 </title>
+    
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>천재교육 팀플 1차</title>
+
+<!--스타일 초기화-->
+<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+<!--폰트-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&amp;display=swap" rel="stylesheet">
+
+<!-- 필요한 플러그인 연결 -->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/footer.css">
+
+<!-- 파비콘 설정 -->
+<!-- 16x16, 24x24, 32x32, 48x48, 64x64, 96x96, 114x114, 128x128, 256x256 등을 활용-->
+<!-- 표준 파비콘 -->
+<link rel="shortcut icon" href="../images/corn_24-24.png">
+<!-- 애플 계열 모바일 -->
+<link rel="apple-touch-icon-precomposed" href="../images/corn_64-64.png">
+<!-- IE 계열 브라우저 -->
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="../images/corn_48-48.png">
+<!-- 파이어폭스, 오페라, 또는 구형 크롬/사파리 -->
+<!-- 브라우저에서 지원하는 것 중 제일 고화질의 파일 선택 -->
+<link rel="icon" href="../images/corn_24-24.png" sizes="24x24">
+<link rel="icon" href="../images/corn_48-48.png" sizes="48x48">
+<link rel="icon" href="../images/corn_64-64.png" sizes="64x64">
+
+
+    <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+    <!-- 필요한 폰트를 로딩 : 구글 웹 폰트에서 폰트를 선택하여 해당 내용을 붙여 넣기 -->
+    <link rel="stylesheet" href="../css/google.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/content_header.css">
+
+    <!-- 필요한 플러그인 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/content_header.css">
+    <link rel="stylesheet" href="../css/msboard.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <style>
+        .contents {
+            clear:both;
+            min-height:100vh;
+        }
+        .contents::after {
+            content:"";
+            clear:both;
+            display:block;
+            width:100%;
+        }
+
+        .page {
+            clear:both;
+            width: 100%;
+            min-height: 100vh;
+            position:relative;
+            top: 50px;
+            margin: 0px auto;
+        }
+        .page::after {
+            content:"";
+            display:block;
+            width: 100%;
+            clear:both;
+        }
+
+        .page_wrap {
+            clear:both;
+            width: 1000px;
+            height: auto;
+            margin:0 auto;
+        }
+
+        .content_tit {
+            font-weight: bold;
+            font-size: 25px;
+            margin: 80px 30px 30px 10px;
+        }
+
+        .btn_group { clear:both; width:800px; margin:20px auto; }
+
+        .inbtn { display:block;  border-radius:100px;
+            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
+            line-height: 48px; background-color: #8CB964; color:#fff; font-size: 18px; }
+        .btn_group:after { content:""; display:block; width:100%; clear: both; }
+        .btn_group p {text-align: center;   line-height:3.6; }
+    </style>
+
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../jquery.dataTables.css">
+    <script src="../jquery.dataTables.js"></script>
+</head>
+<body>
+<div class="container">
+    <header class="hd" id="hd">
+        
+
+<div class="tnb_wrap">
+    <nav class="tnb">
+        <ul class="menu">
+            
+                <li><a href="../member/logout.html">로그아웃</a></li>
+                <li><a href="../admin/adminPage.html">관리자페이지</a></li>
+            
+        </ul>
+    </nav>
+</div>
+<div class="hd_wrap">
+    <a href="/" class="logo">
+        <img src="../images/corn_edu_400-256.png" alt="CORN EDU 로고 타입">
+    </a>
+    <nav class="gnb">
+        <ul class="menu">
+            <li class="item1">
+                <a href="" class="dp1"> 소 개 </a>
+                <ul class="sub">
+                    <li><a href="../intro/intro.html"> 회사 소개 </a></li>
+                    <li><a href="../intro/serviceIntro.html"> 서비스 소개 </a></li>
+                    <li><a href="../map/map.html"> 오시는 길 </a></li>
+                </ul>
+            </li>
+            <li class="item2">
+                <a href="" class="dp1"> 초 등 </a>
+                <ul class="sub">
+                    <li><a href="../lecture/lecture1.html"> 강의 소개 </a></li>
+                    <li><a href="../bookInfo/elmBookInfo.html"> 교재 소개 </a></li>
+                </ul>
+            </li>
+            <li class="item3">
+                <a href="" class="dp1"> 중 등 </a>
+                <ul class="sub">
+                    <li><a href="../lecture/lecture2.html"> 강의 소개 </a></li>
+                    <li><a href="../bookInfo/middleBookInfo.html"> 교재 소개 </a></li>
+                </ul>
+            </li>
+            <li class="item4">
+                <a href="" class="dp1"> 고 등 </a>
+                <ul class="sub">
+                    <li><a href="../lecture/lecture3.html"> 강의 소개 </a></li>
+                    <li><a href="../bookInfo/highBookInfo.html"> 교재 소개 </a></li>
+                </ul>
+            </li>
+            <li class="item5">
+                <a href="" class="dp1"> 커뮤니티 </a>
+                <ul class="sub">
+                    <li><a href="../board/studentboard/StudentBoardList.html"> 학생 커뮤니티 </a></li>
+                    <li><a href="../board/motherboard/MotherBoardList.html"> 학부모 커뮤니티 </a></li>
+                </ul>
+            </li>
+            <li class="item6">
+                <a href="" class="dp1"> 고객지원 </a>
+                <ul class="sub">
+                    <li><a href="../cs/board/boardList.html"> 공지사항 </a></li>
+                    <li><a href="../cs/qna/qnaList.html"> QnA </a></li>
+                    <li><a href="../cs/faq/faqList.html"> FAQ </a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </nav>
+</div>
+    </header>
+    <div class="contents" id="contents">
+        <div class="content_header">
+            <div class="breadcrumb">
+                <p><a href="../">Home</a> &gt; <span>커뮤니티</span> &gt; <span> 학생 커뮤니티 </span> </p>
+                <h2 class="page_tit"> 커뮤니티  </h2>
+            </div>
+        </div>
+        <section class="page" id="page1">
+            <div class="page_wrap">
+                <p class="content_tit"> 학생 커뮤니티 </p>
+                <hr>
+                <div class="board_list_wrap">
+                    <div class="board_list">
+                        <div class="top">
+                            <div class="bno" style="padding-right: 200px"> 글번호 </div>
+                            <div class="Title" style="padding-right: 120px"> 제목 </div>
+                            <div style="width: 15%; padding-left: 150px"> 작성자 </div>
+                            <div style="width: 5%; padding-left: 20px"> 조회수 </div>
+                            <div style="width : 10%; padding-left:40px;"> 작성일 </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bno"> 8 </div>
+                            
+                            <div class="qTitle"> <a href="../board/studentboard/getStudentBoard.html">학생 게시판8</a> </div>
+                            
+                            <div style="width: 22%; padding-left:15px;"> kimbk </div>
+                            <div class="cnt"> 0 </div>
+                            <div style="padding-left: 80px;"> 2023-08-14 </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bno"> 7 </div>
+                            
+                            <div class="qTitle"> <a href="../board/studentboard/getStudentBoard.html">학생 게시판7</a> </div>
+                            
+                            <div style="width: 22%; padding-left:15px;"> kimbk </div>
+                            <div class="cnt"> 0 </div>
+                            <div style="padding-left: 80px;"> 2023-08-14 </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bno"> 6 </div>
+                            
+                            <div class="qTitle"> <a href="../board/studentboard/getStudentBoard.html">학생 게시판6</a> </div>
+                            
+                            <div style="width: 22%; padding-left:15px;"> kimbk </div>
+                            <div class="cnt"> 0 </div>
+                            <div style="padding-left: 80px;"> 2023-08-14 </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bno"> 5 </div>
+                            
+                            <div class="qTitle"> <a href="../board/studentboard/getStudentBoard.html">학생 게시판5</a> </div>
+                            
+                            <div style="width: 22%; padding-left:15px;"> kimhk </div>
+                            <div class="cnt"> 0 </div>
+                            <div style="padding-left: 80px;"> 2023-08-14 </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bno"> 4 </div>
+                            
+                            <div class="qTitle"> <a href="../board/studentboard/getStudentBoard.html">학생 게시판4</a> </div>
+                            
+                            <div style="width: 22%; padding-left:15px;"> kimhk </div>
+                            <div class="cnt"> 0 </div>
+                            <div style="padding-left: 80px;"> 2023-08-14 </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bno"> 3 </div>
+                            
+                            <div class="qTitle"> <a href="../board/studentboard/getStudentBoard.html">학생 게시판3</a> </div>
+                            
+                            <div style="width: 22%; padding-left:15px;"> kimbk </div>
+                            <div class="cnt"> 0 </div>
+                            <div style="padding-left: 80px;"> 2023-08-14 </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bno"> 2 </div>
+                            
+                            <div class="qTitle"> <a href="../board/studentboard/getStudentBoard.html">학생 게시판2</a> </div>
+                            
+                            <div style="width: 22%; padding-left:15px;"> kimbk </div>
+                            <div class="cnt"> 0 </div>
+                            <div style="padding-left: 80px;"> 2023-08-14 </div>
+                        </div>
+                        
+                        <div>
+                            <div class="bno"> 1 </div>
+                            
+                            <div class="qTitle"> <a href="../board/studentboard/getStudentBoard.html">학생 게시판1</a> </div>
+                            
+                            <div style="width: 22%; padding-left:15px;"> kimhk </div>
+                            <div class="cnt"> 5 </div>
+                            <div style="padding-left: 80px;"> 2023-08-14 </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="board_page">
+                        <a href="../board/studentboard/StudentBoardList.html" class="bt first"> &lt;&lt; </a>
+                        <a href="../board/studentboard/StudentBoardList.html" class="bt prev"> &lt; </a>
+                        
+                        <a href="../board/studentboard/StudentBoardList.html" class="num on"> 1 </a>
+                        
+                        <a href="../board/studentboard/StudentBoardList.html" class="bt next"> &gt; </a>
+                        <a href="../board/studentboard/StudentBoardList.html" class="bt last"> &gt;&gt; </a>
+                    </div>
+                    <div class="btn_group" style="margin:0; width:1000px; padding-top:25px; ">
+                        
+                        
+                        <a href="../board/studentboard/addStudentBoard.html" class="inbtn" style="float:right; ">글쓰기</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <footer class="ft" id="ft">
+        
+<div class="ft_wrap">
+  <nav class="ft_link">
+    <ul class="fnb">
+      <li class="ft_logo"></li>
+      <li><a href="">제휴 문의</a></li>
+      <li><a href="">이메일 무단 수집 거부</a></li>
+    </ul>
+    <ul class="snb">
+      <li class="item1"><a href="">소셜1</a></li>
+      <li class="item2"><a href="">소셜2</a></li>
+      <li class="item3"><a href="">소셜3</a></li>
+      <li class="item4"><a href="">소셜4</a></li>
+      <li class="item5"><a href="">소셜5</a></li>
+      <li class="locate">
+        <select name="sel" id="sel" onchange="loc()">
+          <option value="">FAMILY LINK</option>
+          <option value="https://chunjaetext.co.kr/">천재교과서</option>
+          <option value="http://www.milkt.co.kr/Main/Main_new">밀크T</option>
+          <option value="http://www.prinpia.co.kr/">프린피아</option>
+          <option value="http://www.edumon.co.kr/intro/index.asp">에듀몬</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+  <script>
+    function loc(){
+      var url = document.getElementById("sel").value;
+      //location.href = url;  //현재 창에
+      if(url!="") {
+        var win = window.open(url); //새창에
+      }
+    }
+  </script>
+</div>
+<div class="ft_wrap2">
+  <p class="copyright">
+    <span>(주)천재교육</span>
+    <span>서울시 금천구 가산로9길 54</span>
+    <span>대표자 강희철</span>
+    <span>사업자등록번호 119-81-19350</span>
+    <span>통신판매신고번호 제18-439호</span>
+    <span class="end">부가통신사업신고 016712</span>
+  </p>
+  <p class="copyright">
+    <span>천재교육 1577-0902</span>
+    <span>리틀천재 1577-0218</span>
+    <span>월간우등생학습 1577-6226</span>
+    <span>밀크T초등 1577-1533</span>
+    <span>밀크T중학 1522-5533</span>
+    <span class="end">밀크T고등 1522-5533</span>
+  </p>
+  <p class="cp">COPYRIGHT 1981-2023 CHUNJAE EDUCATION INC. ALL RIGHTS RESERVED.</p>
+</div>
+    </footer>
+</div>
+
+</body></html>
