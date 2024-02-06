@@ -135,16 +135,27 @@
         <header class="hd" id="hd">
             
 
-<div class="tnb_wrap">
-    <nav class="tnb">
-        <ul class="menu">
-            
-                <li><a href="../member/logout.html">로그아웃</a></li>
-                <li><a href="../admin/adminPage.html">관리자페이지</a></li>
-            
-        </ul>
-    </nav>
-</div>
+            <div class="tnb_wrap">
+                <nav class="tnb">
+                    <ul class="menu" id="menu">
+                        
+                           
+                        
+                    </ul>
+                </nav>
+            </div>
+            <script>
+              var sid = sessionStorage.getItem("sid");
+              var menu = document.getElementById("menu");
+              console.log(sid);
+              if (sid == null) {
+                  menu.innerHTML = '<li><a href="../member/login.html" > 로그인 </a></li><li><a href="../member/join.html" > 회원가입 </a></li> <li><a href="./map/map.html">오시는길</a></li>';
+              } else if (sid === "admin") {
+                  menu.innerHTML = '<li><a href="../member/logout.html"> 로그아웃 </a><a href="../admin/list.html" > 관리자페이지 </a></li> <li><a href="./map/map.html">오시는길</a></li>';
+              } else {
+                  menu.innerHTML = '<li><a href="../member/logout.html"> 로그아웃 </a><a href="../member/mypage.html"> 마이페이지 </a></li> <li><a href="./map/map.html">오시는길</a></li>';
+              }
+          </script>
 <div class="hd_wrap">
     <a href="/" class="logo">
         <img src="../images/corn_edu_400-256.png" alt="CORN EDU 로고 타입">

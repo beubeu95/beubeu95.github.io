@@ -1,7 +1,7 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학부모 커뮤니티</title>
+    <title>공지사항 수정하기</title>
     
 
 <meta charset="UTF-8">
@@ -51,58 +51,53 @@
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/header.css">
     <style>
-        /* 본문 영역 스타일 */
-        .contents { clear:both; min-height:100vh;
-            /* background-image: url("../../../../images/bg_visual_overview.jpg"); */
-            background-repeat: no-repeat; background-position:center -250px; }
-        .contents::after { content:""; clear:both; display:block; width:100%; }
+    /* 본문 영역 스타일 */
+    .contents { clear:both; min-height:110vh;
+        /* background-image: url("../..images/bg_visual_overview.jpg"); */
+        background-repeat: no-repeat; background-position:center -250px; }
+    .contents::after { content:""; clear:both; display:block; width:100%; }
 
-        .page { clear:both; width: 100vw; height: 100vh; position:relative; }
-        .page::after { content:""; display:block; width: 100%; clear:both; }
+    .page { clear:both; width: 100vw; height: 130vh; position:relative; }
+    .page::after { content:""; display:block; width: 100%; clear:both; }
 
-        .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
-        .page_tit { font-size:48px; text-align: center; padding-top:1em; color:#fff;
-            padding-bottom: 2.4rem; }
+    .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
+    .page_tit { font-size:48px; text-align: center; padding-top:1em; color:#fff;
+        padding-bottom: 1rem; }
 
-        .content_tit {
-            font-weight: bold;
-            font-size: 25px;
-            margin: 80px 30px 30px 10px;
-        }
+    .content_tit {
+        font-weight: bold;
+        font-size: 25px;
+        margin: 80px 30px 30px 10px;
+    }
 
-        .breadcrumb { clear:both;
-            width:1200px; margin: 0 auto; text-align: right; color:#fff;
-            padding-top: 28px; padding-bottom: 28px; }
-        .breadcrumb a { color:#fff; }
-        .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
+    .breadcrumb { clear:both;
+        width:1200px; margin: 0 auto; text-align: right; color:#fff;
+        padding-top: 28px; padding-bottom: 28px; }
+    .breadcrumb a { color:#fff; }
+    .frm { clear:both; width:1200px; margin:0 auto; padding-top: 80px; }
 
-        .tb1 { width:800px; margin:50px auto; }
-        .tb1 th { width:150px; line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-top:1px solid #333; border-bottom:1px solid #333;
-            background-color:#8CB964; color:#fff; vertical-align:top;}
-        .tb1 td { width:650px; line-height:32px; padding-top:8px; padding-bottom:8px;
-            border-bottom:1px solid #333;
-            padding-left: 14px; border-top:1px solid #333; }
+    .tb1 { width:800px; margin:50px auto; }
+    .tb1 th { width:150px; line-height:32px; padding-top:8px; padding-bottom:8px;
+        border-top:1px solid #333; border-bottom:1px solid #333;
+        background-color:#8CB964; color:#fff; vertical-align:top;}
+    .tb1 td { width:650px; line-height:32px; padding-top:8px; padding-bottom:8px;
+        border-bottom:1px solid #333;
+        padding-left: 14px; border-top:1px solid #333; }
 
-        .indata { display:inline-block; width:600px; height: 48px; line-height: 48px;
-            padding:14px; font-size:18px; }
-        .indata2 { width: 600px; padding: 14px; font-size:18px; }
-        .inbtn { display:block;  border-radius:100px;
-            min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
-            line-height: 48px; background-color: #8CB964; color:#fff; font-size: 18px; }
-        .inbtn:first-child { float:left; }
-        .inbtn:last-child { float:right; }
-        textarea {
-            resize: none;
-        }
+    .indata { display:inline-block; width:600px; height: 48px; line-height: 48px;
+        padding:14px; font-size:18px; }
+    .indata2 { width: 600px; padding: 14px; font-size:18px; }
+    .inbtn { display:block;  border-radius:100px;
+        min-width:140px; padding-left: 24px; padding-right: 24px; text-align: center;
+        line-height: 48px; background-color: #8CB964; color:#fff; font-size: 18px; }
+    .inbtn:first-child { float:left; }
+    .inbtn:last-child { float:right; }
+    textarea {
+        resize: none;
+    }
+
     </style>
-
     <link rel="stylesheet" href="../../css/footer.css">
-    <style>
-        .btn_group { clear:both; width:800px; margin:20px auto; }
-        .btn_group:after { content:""; display:block; width:100%; clear: both; }
-        .btn_group p {text-align: center;   line-height:3.6; }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -123,11 +118,11 @@
           var menu = document.getElementById("menu");
           console.log(sid);
           if (sid == null) {
-              menu.innerHTML = '<li><a href="../../member/login.html" > 로그인 </a></li><li><a href="../../member/join.html" > 회원가입 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../..member/login.html" > 로그인 </a></li><li><a href="../..member/join.html" > 회원가입 </a></li> <li><a href="../..map/map.html">오시는길</a></li>';
           } else if (sid === "admin") {
-              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a><a href="../../admin/list.html" > 관리자페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../..member/logout.html"> 로그아웃 </a><a href="../..admin/list.html" > 관리자페이지 </a></li> <li><a href="../..map/map.html">오시는길</a></li>';
           } else {
-              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a><a href="../../member/mypage.html"> 마이페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../..member/logout.html"> 로그아웃 </a><a href="../..member/mypage.html"> 마이페이지 </a></li> <li><a href="../..map/map.html">오시는길</a></li>';
           }
       </script>
 <div class="hd_wrap">
@@ -139,45 +134,45 @@
             <li class="item1">
                 <a href="" class="dp1"> 소 개 </a>
                 <ul class="sub">
-                    <li><a href="../../intro/intro.html"> 회사 소개 </a></li>
-                    <li><a href="../../intro/serviceIntro.html"> 서비스 소개 </a></li>
-                    <li><a href="../../map/map.html"> 오시는 길 </a></li>
+                    <li><a href="../..intro/intro.html"> 회사 소개 </a></li>
+                    <li><a href="../..intro/serviceIntro.html"> 서비스 소개 </a></li>
+                    <li><a href="../..map/map.html"> 오시는 길 </a></li>
                 </ul>
             </li>
             <li class="item2">
                 <a href="" class="dp1"> 초 등 </a>
                 <ul class="sub">
-                    <li><a href="../../lecture/lecture1.html"> 강의 소개 </a></li>
-                    <li><a href="../../bookInfo/elmBookInfo.html"> 교재 소개 </a></li>
+                    <li><a href="../..lecture/lecture1.html"> 강의 소개 </a></li>
+                    <li><a href="../..bookInfo/elmBookInfo.html"> 교재 소개 </a></li>
                 </ul>
             </li>
             <li class="item3">
                 <a href="" class="dp1"> 중 등 </a>
                 <ul class="sub">
-                    <li><a href="../../lecture/lecture2.html"> 강의 소개 </a></li>
-                    <li><a href="../../bookInfo/middleBookInfo.html"> 교재 소개 </a></li>
+                    <li><a href="../..lecture/lecture2.html"> 강의 소개 </a></li>
+                    <li><a href="../..bookInfo/middleBookInfo.html"> 교재 소개 </a></li>
                 </ul>
             </li>
             <li class="item4">
                 <a href="" class="dp1"> 고 등 </a>
                 <ul class="sub">
-                    <li><a href="../../lecture/lecture3.html"> 강의 소개 </a></li>
-                    <li><a href="../../bookInfo/highBookInfo.html"> 교재 소개 </a></li>
+                    <li><a href="../..lecture/lecture3.html"> 강의 소개 </a></li>
+                    <li><a href="../..bookInfo/highBookInfo.html"> 교재 소개 </a></li>
                 </ul>
             </li>
             <li class="item5">
                 <a href="" class="dp1"> 커뮤니티 </a>
                 <ul class="sub">
-                    <li><a href="../../board/studentboard/StudentBoardList.html"> 학생 커뮤니티 </a></li>
-                    <li><a href="../../board/motherboard/MotherBoardList.html"> 학부모 커뮤니티 </a></li>
+                    <li><a href="../..board/studentboard/StudentBoardList.html"> 학생 커뮤니티 </a></li>
+                    <li><a href="../..board/motherboard/MotherBoardList.html"> 학부모 커뮤니티 </a></li>
                 </ul>
             </li>
             <li class="item6">
                 <a href="" class="dp1"> 고객지원 </a>
                 <ul class="sub">
-                    <li><a href="../../cs/board/boardList.html"> 공지사항 </a></li>
-                    <li><a href="../../cs/qna/qnaList.html"> QnA </a></li>
-                    <li><a href="../../cs/faq/faqList.html"> FAQ </a></li>
+                    <li><a href="../..cs/board/boardList.html"> 공지사항 </a></li>
+                    <li><a href="../..cs/qna/qnaList.html"> QnA </a></li>
+                    <li><a href="../..cs/faq/faqList.html"> FAQ </a></li>
                 </ul>
             </li>
         </ul>
@@ -188,33 +183,38 @@
     <div class="contents" id="contents">
         <div class="content_header">
             <div class="breadcrumb">
-                <p><a href="..">Home</a> &gt; <span> 학부모 커뮤니티 </span> </p>
-                <h2 class="page_tit"> 학부모 커뮤니티 </h2>
+                <p><a href="../..">Home</a> &gt; <span> 학생 커뮤니티 </span> </p>
+                <h2 class="page_tit"> 학생 커뮤니티 상세보기 </h2>
             </div>
         </div>
         <section class="page" id="page1">
             <div class="page_wrap">
-
-            
+                <h2 class="page_tit">공지사항 수정하기</h2>
                 <hr>
-                <form action="../../board/motherboard/MotherBoardList.html">
+                <!-- 5. Board 객체의 내용을 폼의 각 컨트롤(input/textarea)에 바인딩하여 출력 -->
+                <form action="../../board/studentboard/getStudentBoard.html">
                     <table class="tb1">
                         <tbody>
                         <tr>
-                            <th><label for="title">글 제목</label></th>
-                            <td>
-                                <input type="text" name="title" id="title" class="indata" required="">
-                                <input type="hidden" name="author" id="author" value="admin">
-                            </td>
+                            <th>글 번호</th>
+                            <td><input type="text" name="bno" id="bno" class="indata" value="5" readonly=""></td>
                         </tr>
                         <tr>
-                            <th><label for="content">글 내용</label></th>
-                            <td><textarea rows="10" cols="80" name="content" id="content" class="indata2" maxlength="990" required=""></textarea></td>
+                            <th>글 제목</th>
+                            <td><input type="text" name="title" id="title" class="indata" value="학생 게시판5" required=""></td>
+                        </tr>
+                        <tr>
+                            <th>글 내용</th>
+                            <td><textarea rows="10" cols="80" name="content" id="content" class="indata2">여기는 학생 게시판5입니다</textarea></td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" value="글쓰기" class="inbtn">
-                                <input type="reset" value="취소" class="inbtn">
+                                
+                                <a href="javascript:history.go(-1)" class="inbtn"> 이전 페이지 </a>
+                                
+                                <input type="submit" value="글수정" class="inbtn">
+                                <a href="../../board/studentboard/delStudentBoard.html?bno=5" class="inbtn">글 삭제</a>
+                                
                             </td>
                         </tr>
                         </tbody>
