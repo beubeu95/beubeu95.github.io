@@ -192,9 +192,9 @@
           if (sid == null) {
               menu.innerHTML = '<li><a href="../../member/login.html" > 로그인 </a></li><li><a href="../../member/join.html" > 회원가입 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           } else if (sid === "admin") {
-              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a><a href="../../admin/list.html" > 관리자페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a></li><li><a href="../../admin/list.html" > 관리자페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           } else {
-              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a><a href="../../member/mypage.html"> 마이페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a></li><li><a href="../../member/mypage.html"> 마이페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           }
       </script>
 <div class="hd_wrap">
@@ -268,10 +268,8 @@
                 
                 
                 <tr>
-                    <td colspan="3">
-                        <a href="../../cs/qna/delQna.html?lev=0&amp;qno=10" class="btn">삭제</a>
-                        <a href="../../cs/qna/updateQna.html" class="btn">수정</a>
-                        <a href="../../cs/qna/addQuestion2.html" class="btn1">답변하기</a>
+                    <td colspan="3" id="qnaBtn">
+                        
                     </td>
                 </tr>
                 
@@ -302,6 +300,16 @@
             </div>
         </section>
     </div>
+    <script>
+        var sid = sessionStorage.getItem("sid");
+        var qnaBtn = document.getElementById("qnaBtn");
+        console.log(sid);
+        if (sid !== null) {
+            qnaBtn.innerHTML = '<a href="../../cs/qna/delQna.html?lev=0&amp;qno=10" class="btn">삭제</a><a href="../../cs/qna/updateQna.html" class="btn">수정</a>';
+        } else if (sid === 'admin') {
+            qnaBtn.innerHTML = '<a href="../../cs/qna/delQna.html?lev=0&amp;qno=10" class="btn">삭제</a><a href="../../cs/qna/updateQna.html" class="btn">수정</a><a href="../../cs/qna/addQuestion2.html" class="btn1">답변하기</a>';
+        }
+    </script>
     <footer class="ft" id="ft">
         
 <div class="ft_wrap">

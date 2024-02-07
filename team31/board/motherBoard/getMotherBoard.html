@@ -259,9 +259,9 @@
           if (sid == null) {
               menu.innerHTML = '<li><a href="../../member/login.html" > 로그인 </a></li><li><a href="../../member/join.html" > 회원가입 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           } else if (sid === "admin") {
-              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a><a href="../../admin/list.html" > 관리자페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a></li><li><a href="../../admin/list.html" > 관리자페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           } else {
-              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a><a href="../../member/mypage.html"> 마이페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a></li><li><a href="../../member/mypage.html"> 마이페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           }
       </script>
 <div class="hd_wrap">
@@ -333,9 +333,8 @@
                     <tbody>
                     
                     <tr>
-                        <td colspan="3">
-                            <a href="../../board/motherboard/delMotherBoard.html?bno=1&amp;target=board" class="btn"> 삭제 </a>
-                            <a href="../../board/motherboard/updateMotherBoard.html" class="btn"> 수정 </a>
+                        <td colspan="3" id="addBoard">
+                           
                         </td>
                     </tr>
                     
@@ -390,6 +389,14 @@
             </div>
         </section>
     </div>
+    <script>
+        var sid = sessionStorage.getItem("sid");
+        var addBoard = document.getElementById("addBoard");
+        console.log(sid);
+        if (sid !== null) {
+            addBoard.innerHTML = ' <a href="../../board/motherboard/delMotherBoard.html?bno=1&amp;target=board" class="btn"> 삭제 </a><a href="../../board/motherboard/updateMotherBoard.html" class="btn"> 수정 </a>';
+        } 
+    </script>
     <footer class="ft" id="ft">
         
 <div class="ft_wrap">

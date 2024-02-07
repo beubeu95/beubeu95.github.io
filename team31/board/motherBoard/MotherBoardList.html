@@ -129,9 +129,9 @@
           if (sid == null) {
               menu.innerHTML = '<li><a href="../../member/login.html" > 로그인 </a></li><li><a href="../../member/join.html" > 회원가입 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           } else if (sid === "admin") {
-              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a><a href="../../admin/list.html" > 관리자페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a></li><li><a href="../../admin/list.html" > 관리자페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           } else {
-              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a><a href="../../member/mypage.html"> 마이페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
+              menu.innerHTML = '<li><a href="../../member/logout.html"> 로그아웃 </a></li><li><a href="../../member/mypage.html"> 마이페이지 </a></li> <li><a href="../../map/map.html">오시는길</a></li>';
           }
       </script>
 <div class="hd_wrap">
@@ -231,16 +231,23 @@
                         <a href="../../board/motherboard/MotherBoardList.html" class="bt next"> &gt; </a>
                         <a href="../../board/motherboard/MotherBoardList.html" class="bt last"> &gt;&gt; </a>
                     </div>
-                    <div class="btn_group" style="margin:0; width:1000px; padding-top:25px; ">
+                    <div class="btn_group" style="margin:0; width:1000px; padding-top:25px; " id="addBoard">
                         
                         
-                        <a href="../../board/motherboard/addMotherBoard.html" class="inbtn" style="float:right; ">글쓰기</a>
+                        
                         
                     </div>
                 </div>
             </div>
         </section>
-        
+        <script>
+            var sid = sessionStorage.getItem("sid");
+            var addBoard = document.getElementById("addBoard");
+            console.log(sid);
+            if (sid !== null) {
+                addBoard.innerHTML = '<a href="../../board/motherboard/addMotherBoard.html" class="inbtn" style="float:right; ">글쓰기</a>';
+            } 
+        </script>
     </div>
     <footer class="ft" id="ft">
         
