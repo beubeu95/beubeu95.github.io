@@ -1,0 +1,537 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>장바구니 결제</title>
+    
+    
+
+
+
+
+<!--meta-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Corn Books">
+<meta name="keywords" content="cornedu, cornbooks, 참고서, 수험서, 교재, 영유아, 초등, 중등, 고등">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&amp;display=swap" rel="stylesheet">
+<script src="./js/jquery-1.10.0.js"></script>
+
+<!-- Css Styles -->
+<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="../css/nice-select.css" type="text/css">
+<link rel="stylesheet" href="../css/jquery-ui.min.css" type="text/css">
+<link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css">
+<link rel="stylesheet" href="../css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+
+<!-- Js Plugins -->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.nice-select.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
+<script src="../js/jquery.slicknav.js"></script>
+<script src="../js/mixitup.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/main.js"></script>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- iamport.payment.js -->
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+    <style>
+        .breadcrumb-section {background-image: url("../img/breadcrumb.jpg");}
+        #paycart {width : 1100px; margin : 0 auto;}
+        .checktitle li {overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    </style>
+</head>
+
+<body style="">
+<!-- Page Preloder -->
+<div id="preloder" style="display: none;">
+    <div class="loader" style="display: none;"></div>
+</div>
+
+<!-- Humberger Begin -->
+
+
+
+
+<div class="humberger__menu__overlay"></div>
+<div class="humberger__menu__wrapper">
+    <div class="humberger__menu__logo">
+        <a href="#"><img src="../img/logo.png" alt=""></a>
+    </div>
+    <div class="humberger__menu__cart">
+        <ul>
+            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+        </ul>
+        <div class="header__cart__price">item: <span>$150.00</span></div>
+    </div>
+    <div class="humberger__menu__widget">
+        <div class="header__top__right__language">
+            <img src="../img/language.png" alt="">
+            <div>English</div>
+            <span class="arrow_carrot-down"></span>
+            <ul>
+                <li><a href="#">Spanis</a></li>
+                <li><a href="#">English</a></li>
+            </ul>
+        </div>
+        <div class="header__top__right__auth">
+            <a href="#"><i class="fa fa-user"></i> Login</a>
+        </div>
+    </div>
+    <nav class="humberger__menu__nav mobile-menu">
+        <ul>
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li><a href="../shop-grid.html">Shop</a></li>
+            <li><a href="#">Pages</a>
+                <ul class="header__menu__dropdown">
+                    <li><a href="../shop-details.html">Shop Details</a></li>
+                    <li><a href="../chartList.do">Shoping Cart</a></li>
+                    <li><a href="../checkout.html">Check Out</a></li>
+                    <li><a href="<../Blog_details/blog-details.html">Blog Details</a></li>
+                </ul>
+            </li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li><a href="../contract/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="mobile-menu-wrap"></div>
+    <div class="header__top__right__social">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-pinterest-p"></i></a>
+    </div>
+    <div class="humberger__menu__contact">
+        <ul>
+            <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+            <li>Free Shipping for all Order of $99</li>
+        </ul>
+    </div>
+</div>
+<!-- Humberger End -->
+
+<!-- Header Section Begin -->
+
+
+
+
+<header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="header__top__right">
+                            <div class="header__top__right__auth" id="menu">
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var sid = sessionStorage.getItem("sid");
+        var menu = document.getElementById("menu");
+        console.log(sid);
+        if (sid == null) {
+            menu.innerHTML = '<a href="../member/Login.html"><i class="fa fa-user"></i> Login</a><a href="../member/Term.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Join </a>';
+        } else if (sid === "admin") {
+            menu.innerHTML = '<a href="../member/logout.html"><i class="fa fa-user"></i> Logout </a><a href="../admin/AdminDashboard.do"><i class="fa fa-sign-in" aria-hidden="true"></i> Admin Page </a>';
+        } else {
+            menu.innerHTML = '<a href="../member/logout.html"><i class="fa fa-user"></i> Logout </a><a href="../member/mypageInfo.html"><i class="fa fa-sign-in" aria-hidden="true"></i> My Page </a>';
+        }
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="header__logo">
+                    <a href="../"><img src="../img/logo/corn_book_85-55.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="./CateProListCate=QRS.html"> 유아 </a>
+                            <ul class="header__menu__dropdown">
+                                <li><a href="./CateProListCate=Q.html">유아콘텐츠</a></li>
+                                <li><a href="./CateProListCate=R.html">유아놀이</a></li>
+                                <li><a href="./CateProListCate=S.html">유아기타</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./CateProListCate=BCD.html"> 초등 </a>
+                            <ul class="header__menu__dropdown">
+                                <li><a href="./CateProListCate=B.html">초등참고서</a></li>
+                                <li><a href="./CateProListCate=C.html">초등문제집</a></li>
+                                <li><a href="./CateProListCate=D.html">초등기타</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./CateProListCate=EFGH.html"> 중등 </a>
+                            <ul class="header__menu__dropdown">
+                                <li><a href="./CateProListCate=E.html">중등교과서</a></li>
+                                <li><a href="./CateProListCate=F.html">중등참고서</a></li>
+                                <li><a href="./CateProListCate=G.html">중등문제집</a></li>
+                                <li><a href="./CateProListCate=H.html">중등기타</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./CateProListCate=IJKL.html"> 고등 </a>
+                            <ul class="header__menu__dropdown">
+                                <li><a href="./CateProListCate=I.html">고등교과서</a></li>
+                                <li><a href="./CateProListCate=J.html">고등참고서</a></li>
+                                <li><a href="./CateProListCate=K.html">고등문제집</a></li>
+                                <li><a href="./CateProListCate=L.html">고등기타</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"> 고객지원 </a>
+                            <ul class="header__menu__dropdown">
+                                <li><a href="../cs/NoticeList.html"> 공지사항 </a></li>
+                                <li><a href="../cs/FaqList.html"> FAQ </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3">
+                
+                    <div class="header__cart">
+                        <ul>
+                            <li><a href="./CartList.html"><i class="fa fa-shopping-bag"></i></a></li>
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="humberger__open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+
+</header>
+
+
+<!-- Header Section End -->
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Pay Cart</h2>
+                    <div class="breadcrumb__option">
+                        <a href="../index.html">Home</a>
+                        <span>Pay Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+
+<!-- 장바구니 결제 -->
+<section class="shoping-cart spad">
+    <div class="container">
+        <div class="row">
+            <form id="paycart" action="../index.html" method="post" onsubmit="return payCheck(this)">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="checkout__input">
+                            <p>받는 사람 연락처<span>*</span></p>
+                            <input type="hidden" name="id" id="id" value="kimhk">
+                            <input type="hidden" name="name" id="name" value="김현경">
+                            <input type="hidden" name="email" id="email" value="kimhk@shop.com">
+                            <input type="hidden" name="tel" id="tel" value="010-1234-5678">
+                            <input type="hidden" name="address" id="address" value="">
+                            <input type="tel" name="custel" id="custel" required="">
+                        </div>
+                        <div class="checkout__input">
+                            <p>배송지 주소<span>*</span></p>
+                            <input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="checkout__input__add" required=""><br>
+                            <input type="text" name="address2" id="address2" placeholder="상세 주소 입력" required=""><br>
+                        </div>
+                        <div class="checkout__input">
+                            <input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" required="">
+                            <button type="button" id="post_btn" onclick="findAddr()" class="site-btn">우편번호 검색</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>결제수단<span>*</span></p>
+                                    <select name="pay_method" id="pay_method" style="width: 300px;">
+                                        <option value="신용카드">신용카드</option>
+                                        <option value="체크카드">체크카드</option>
+                                        <option value="계좌이체">계좌이체</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input" style="width: 300px;">
+                                    <p>결제사<span>*</span></p>
+                                    <select name="pay_com" id="pay_com" style="width: 300px;">
+                                        <option value="선택안함">선택안함</option>
+                                    <option value="현대카드">현대카드</option><option value="농협카드">농협카드</option><option value="BC카드">BC카드</option><option value="KB카드">KB카드</option></select>
+                                    <input type="hidden" name="pay_com2" id="pay_com2" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout__input">
+                            <p>결제 번호<span>*</span></p>
+                            <input type="text" name="pay_account" id="pay_account" required="">
+                            <input type="hidden" name="Paymount" id="payAmount">
+                            <input type="hidden" name="payCk" id="payCk" value="yes">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="checkout__order">
+                            <h4>결제</h4>
+                            <div class="checkout__order__products">Products <span>Total</span></div>
+                            <ul class="checktitle">
+                                
+                                <li>어떤 교과서를 쓰더라도 언제나 우등생 가을＊겨울 1-2 <span class="total">5000</span>
+                                    <input type="hidden" name="title" id="proName" value="어떤 교과서를 쓰더라도 언제나 우등생 가을＊겨울 1-2">
+                                </li>
+                                
+                                <li>어떤 교과서를 쓰더라도 언제나 우등생 가을＊겨울 1-2 <span class="total">5000</span>
+                                    <input type="hidden" name="title" id="proName" value="어떤 교과서를 쓰더라도 언제나 우등생 가을＊겨울 1-2">
+                                </li>
+                                
+                                <li>어떤 교과서를 쓰더라도 언제나 우등생 가을＊겨울 1-2 <span class="total">5000</span>
+                                    <input type="hidden" name="title" id="proName" value="어떤 교과서를 쓰더라도 언제나 우등생 가을＊겨울 1-2">
+                                </li>
+                                
+                            </ul>
+                            <div class="checkout__order__subtotal">Subtotal <span id="subprice"><span>15000</span></span></div>
+                            <div class="checkout__order__total">Total<span id="totalprice"><span>15000</span></span>
+                            </div>
+                            <input type="button" id="pay" value="PLACE ORDER" class="site-btn">
+                            
+                                <input type="submit" class="site-btn" value="구매">
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <script>
+                $(document).ready(function(){
+                    var cardArr1 = ["현대카드","농협카드","BC카드","KB카드"];
+                    var cardArr2 = ["하나카드","농협카드","BC카드","신한카드"];
+                    var bankArr = ["카카오뱅크","농협은행","신한은행","기업은행","국민은행"];
+                    $("#pay_method").change(function(){
+                        var th = $(this).val();
+                        if(th==="신용카드"){
+                            $("#pay_com").children("option:not(:first)").remove();
+                            for(var i=0;i<cardArr1.length;i++) {
+                                $("#pay_com").append("<option value='" + cardArr1[i] + "'>" + cardArr1[i] + "</option>");
+                            }
+                        } else if(th==="체크카드"){
+                            $("#pay_com").children("option:not(:first)").remove();
+                            for(var i=0;i<cardArr2.length;i++) {
+                                $("#pay_com").append("<option value='"+cardArr2[i]+"'>"+cardArr2[i]+"</option>");
+                            }
+                        } else {
+                            $("#pay_com").children("option:not(:first)").remove();
+                            for(var i=0;i<bankArr.length;i++) {
+                                $("#pay_com").append("<option value='"+bankArr[i]+"'>"+bankArr[i]+"</option>");
+                            }
+                        }
+                    }).change();
+                    $("#pay_com").change(function(){
+                        $("#pay_com2").val($(this).val());
+                    });
+                });
+            </script>
+            <script>
+                //주소 연동 API
+                function findAddr() {
+                    new daum.Postcode({
+                        oncomplete: function(data) {
+                            console.log(data);
+                            var roadAddr = data.roadAddress;
+                            var jibunAddr = data.jibunAddress;
+                            document.getElementById("postcode").value = data.zonecode;
+                            if(roadAddr !== '') {
+                                document.getElementById("address1").value = roadAddr;
+                            } else if(jibunAddr !== ''){
+                                document.getElementById("address1").value = jibunAddr;
+                            }
+                            document.getElementById("address2").focus();
+                        }
+                    }).open();
+                }
+            </script>
+            <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+            <script>
+                //결제모듈 API 연동
+                $(document).ready(function(){
+                    var totalPay=0;
+                    var proName;
+
+                    $(".total").each(function(){
+                        totalPay = totalPay + parseInt($(this).text());
+                    });
+
+                    //합계를 출력
+                    $("#subprice").html("<span>"+totalPay+"</span>");
+                    $("#totalprice").html("<span>"+totalPay+"</span>");
+
+                    $("#pay").click(function(){
+                        var cname = $("#name").val();
+                        var email = $("#email").val();
+                        var tel = $("#tel").val();
+                        var addr = $("#addr").val();
+                        var postcode = $("#postcode").val();
+                        proName = $("#proName").val();
+
+
+                        alert("결제할 금액 : "+totalPay);
+
+                        //상품명_현재시간
+                        var d = new Date();
+                        var date = d.getFullYear()+''+(d.getMonth()+1)+''+d.getDate()+''+d.getHours()+''+d.getMinutes()+''+d.getSeconds();
+                        var IMP = window.IMP;
+                        IMP.init('imp11164187'); // 결제 API를 사용하기 위한 코드 입력!
+                        IMP.request_pay({	      //결제 요청
+                            pg :"T5102001",         //상점 거래 ID
+                            merchant_uid : '상품명_' + date, //
+                            name : proName,				// 결제 명
+                            amount : totalPay,					// 결제금액
+                            buyer_email : email, // 구매자 email
+                            buyer_name : cname,				// 구매자 이름
+                            buyer_tel : tel,		// 구매자 전화번호
+                            buyer_addr : addr,		// 구매자 주소
+                            buyer_postcode : postcode			// 구매자 우편번호
+                        }, function(rsp){
+                            if(rsp.success){
+                                console.log(rsp);
+                                var msg = '결제가 완료 되었습니다.';
+                                var r1 = '고유 아이디 : ' +rsp.imp_uid;
+                                var r2 = '상점 거래 아이디 : ' +rsp.merchant_uid;
+                                var r3 = '결제 금액 : ' +rsp.paid_amount;
+                                var r4 = '카드 승인 번호 : '+rsp.apply_num;
+
+                                //$("#payCk").val("yes");
+                                //$("#payAmount").val(rsp.paid_amount);
+                                //$("#pmethod").val(rsp.pay_method);
+                                //$("#pcom").val(rsp.pg_provider);
+                                //$("#cnum").val(rsp.apply_num);
+                                //alert(msg);
+                                //$("#paymentResult").html(r1+"<br>"+r2+"<br>"+r3+"<br>"+r4);
+                            } else{
+                                //$("#paymentResult").html('결제실패<br>'+'에러내용 : ' +rsp.error_msg);
+                            }
+                            //테스트용이므로 실패시에도 그냥 통과시킴
+                            $("#payCk").val("yes");
+                            $("#payAmount").val(totalPay);
+                            $("#pay_method").val("신용카드");
+                            $("#pay_com").val("삼성카드");
+                            $("#cus_num").val("123-1234-1234-1278");
+                            $("#paymentResult").text("결제 완료 : "+totalPay);
+                        });
+                    });
+                });
+            </script>
+            <script>
+                function payCheck(f){
+                    var payCk = f.payCk.value;
+                    console.log(payCk);
+                    if(payCk!="yes"){
+                        alert("아직 결제 전 입니다.");
+                        return false;
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</section>
+<!-- 장바구니 결제 끝 -->
+
+<!-- Footer Section Begin -->
+
+
+
+
+<footer class="footer spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    <div class="footer__about__logo">
+                        <a href="../"><img src="../img/logo/corn_book_85-55.png" alt=""></a>
+                    </div>
+                    <ul>
+                        <li><b>Address</b>: 서울특별시 금천구 가산동,<br> 마리오아울렛 2관 11층 천재교육</li>
+                        <li><b>Phone</b>: +82 - 010-1234-1234</li>
+                        <li><b>Email</b>: admin@cornedu.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                <div class="footer__widget">
+                    <h6>Useful Links</h6>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">유아콘텐츠</a></li>
+                        <li><a href="#">유아놀이</a></li>
+                        <li><a href="#">유아기타</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">중등교과서</a></li>
+                        <li><a href="#">중등참고서</a></li>
+                        <li><a href="#">중등문제집</a></li>
+                        <li><a href="#">중등기타</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">초등교과서</a></li>
+                        <li><a href="#">초등참고서</a></li>
+                        <li><a href="#">초등문제집</a></li>
+                        <li><a href="#">초등기타</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">고등교과서</a></li>
+                        <li><a href="#">고등참고서</a></li>
+                        <li><a href="#">고등문제집</a></li>
+                        <li><a href="#">고등기타</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="footer__widget">
+                    <div class="footer__widget__social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer__copyright">
+                    <div class="footer__copyright__text"><p>
+                        Copyright ©<script>document.write(new Date().getFullYear());</script>2024 All rights reserved | by <a href="" target="_blank">CornBooks</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                    <div class="footer__copyright__payment"><img src="../img/payment-item.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+</body></html>
